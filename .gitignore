@@ -1,0 +1,17 @@
+.cache
+.DS_Store
+.idea
+.output
+.temp
+*.local
+*.log
+*.vsix
+
+build
+
+node_modules
+
+src/.vitepress/cache/
+.env
+.npmrc
+.eslintcache
