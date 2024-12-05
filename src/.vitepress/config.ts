@@ -1,8 +1,8 @@
-import {transformerTwoslash} from '@shikijs/vitepress-twoslash';
-import {defineConfig} from 'vitepress';
+import { transformerTwoslash } from '@shikijs/vitepress-twoslash';
+import { defineConfig } from 'vitepress';
 
-import {nav} from './nav';
-import {sidebar} from './sidebar';
+import { nav } from './nav';
+import { sidebar } from './sidebar';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -24,13 +24,13 @@ export default defineConfig({
     codeTransformers: [transformerTwoslash()],
   },
   head: [
-    ['link', {rel: 'icon', type: 'image/png', size: '96x96', href: '/favicon-96x96.png'}],
-    ['link', {rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg?v=1'}],
-    ['link', {rel: 'shortcut icon', href: '/favicon.ico'}],
-    ['link', {rel: 'apple-touch-icon', size: '180x180', href: '/apple-touch-icon.png'}],
-    ['link', {rel: 'apple-mobile-web-app-title', content: 'MPG Mods'}],
-    ['link', {rel: 'manifest', href: '/site.webmanifest'}],
-    ['meta', {name: 'theme-color', content: '#00a3bb'}],
+    ['link', { rel: 'icon', type: 'image/png', size: '96x96', href: '/favicon-96x96.png' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg?v=1' }],
+    ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
+    ['link', { rel: 'apple-touch-icon', size: '180x180', href: '/apple-touch-icon.png' }],
+    ['link', { rel: 'apple-mobile-web-app-title', content: 'MPG Mods' }],
+    ['link', { rel: 'manifest', href: '/site.webmanifest' }],
+    ['meta', { name: 'theme-color', content: '#00a3bb' }],
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -80,14 +80,14 @@ export default defineConfig({
       text: 'Обновлено',
       formatOptions: {
         dateStyle: 'short',
-        timeStyle: 'short'
-      }
+        timeStyle: 'short',
+      },
     },
     socialLinks: [
       // https://simpleicons.org/
-      { icon: 'discord', link: 'https://discord.gg/zgNRg5n5UG'},
+      { icon: 'discord', link: 'https://discord.gg/zgNRg5n5UG' },
       { icon: 'steam', link: 'https://steamcommunity.com/id/pafnuty10' },
-    ]
+    ],
   },
   vite: {
     optimizeDeps: {

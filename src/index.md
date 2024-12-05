@@ -16,7 +16,7 @@ features:
     # details: server-side
     linkText: Делаем любого зомби или животного боссом со своими подопечными
   - title: MPG_TDM_Logs
-    link: /tdm-logs/    
+    link: /tdm-logs/
     # details: server-side
     linkText: Логи для действий игроков с предметами (взятие, сброс, перемещение)
   - title: MPG_DamageRadius

@@ -5,14 +5,8 @@ pre-commit:
   parallel: true
   commands:
     typecheck:
-      run: npm run lint:types
+      run: pnpm lint:types
     lint:
-      run: npm run lint:scripts
+      run: pnpm lint:scripts
     markdown:
-      run: npm run lint:md
-
-commit-msg:
-  parallel: false
-  commands:
-    commitlint:
-      run: npx commitlint --edit
+      run: pnpm lint:md
