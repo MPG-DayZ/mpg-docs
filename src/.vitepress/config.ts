@@ -1,18 +1,18 @@
-import { transformerTwoslash } from '@shikijs/vitepress-twoslash';
-import { defineConfig } from 'vitepress';
+import {transformerTwoslash} from '@shikijs/vitepress-twoslash';
+import {defineConfig} from 'vitepress';
 
-import { nav } from './nav';
-import { sidebar } from './sidebar';
+import {nav} from './nav';
+import {sidebar} from './sidebar';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'Dev Docs',
-  description: 'Документация для разработчиков',
+  title: 'MPG Mods',
+  description: 'Документация по модам',
   lang: 'ru',
 
   outDir: '../build',
   // Отключено, потому что в пайплайне нет гита, который используется для получения даты изменения страницы
-  lastUpdated: false,
+  lastUpdated: true,
   cleanUrls: false,
   ignoreDeadLinks: [/:\/\/localhost/],
 
@@ -24,19 +24,19 @@ export default defineConfig({
     codeTransformers: [transformerTwoslash()],
   },
   head: [
-    ['link', { rel: 'apple-touch-icon', size: '180x180', href: '/apple-touch-icon.png' }],
-    ['link', { rel: 'icon', type: 'image/png', size: '32x32', href: '/favicon-32x32.png' }],
-    ['link', { rel: 'icon', type: 'image/png', size: '16x16', href: '/favicon-16x16.png' }],
-    ['link', { rel: 'manifest', href: '/site.webmanifest' }],
-    ['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#000000' }],
-    ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
-    ['meta', { name: 'theme-color', content: '#000000' }],
+    ['link', {rel: 'icon', type: 'image/png', size: '96x96', href: '/favicon-96x96.png'}],
+    ['link', {rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg?v=1'}],
+    ['link', {rel: 'shortcut icon', href: '/favicon.ico'}],
+    ['link', {rel: 'apple-touch-icon', size: '180x180', href: '/apple-touch-icon.png'}],
+    ['link', {rel: 'apple-mobile-web-app-title', content: 'MPG Mods'}],
+    ['link', {rel: 'manifest', href: '/site.webmanifest'}],
+    ['meta', {name: 'theme-color', content: '#00a3bb'}],
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav,
     sidebar,
-    logo: '/logo.png',
+    logo: '/logo-small.png',
     // Не отключать т.к. сверху (сбоку на больших экранах) отображается содержимое страницы
     // aside: false,
     search: {
@@ -76,10 +76,13 @@ export default defineConfig({
     outline: {
       label: 'Содержание:',
     },
-    editLink: {
-      pattern: 'https://gitlab.letoile.tech/webui/web/dev-docs/-/tree/master/src/:path',
-      text: 'Редактировать страницу',
-    },
+    lastUpdated: {
+      text: 'Обновлено',
+      formatOptions: {
+        dateStyle: 'short',
+        timeStyle: 'short'
+      }
+    }
   },
   vite: {
     optimizeDeps: {

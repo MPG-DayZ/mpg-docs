@@ -1,21 +1,11 @@
 export const sidebar = {
-  '/vue/': [
+  '/spawner/': [
     {
-      text: 'Vue.js',
+      text: 'MPG_Spawner',
       items: [
-        { text: 'Вступление', link: '/vue/' },
-        { text: 'Экосистема', link: '/vue/ecosystem' },
-      ],
-    },
-    {
-      text: 'Быстрый старт',
-      items: [
-        { text: 'Настройка окружения', link: '/vue/ide' },
-        { text: 'Отладка приложения', link: '/vue/debug' },
-        { text: 'Onboard разработчика для Vue3', link: '/vue/onboard' },
-        { text: 'Строгие рекомендации', link: '/vue/recomendations' },
-        { text: 'Общая информация', link: '/vue/information' },
-        { text: 'FAQ', link: '/vue/faq' },
+        { text: 'Информация', link: '/spawner/' },
+        { text: 'Сравнение с другими спавнерами', link: '/spawner/compare' },
+        { text: 'Настройка мода', link: '/spawner/mod-config' },
       ],
     },
   ],

@@ -1,10 +1,9 @@
-// eslint.config.js
-
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { includeIgnoreFile } from '@eslint/compat';
-import letu from '@webui/eslint-config-letu';
+
+import pafnuty from './scripts/eslint.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -14,6 +13,6 @@ export default [
   // Подхватываем гитигнор
   includeIgnoreFile(gitignorePath),
 
-  // Добавляем конфиг letu
-  ...letu,
+  // Добавляем конфиг pafnuty
+  ...pafnuty,
 ];

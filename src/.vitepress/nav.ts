@@ -3,9 +3,9 @@ export const nav = [
     text: 'Навигация',
     items: [
       {
-        text: 'Letoile',
-        link: '/letoile/',
-        activeMatch: '/letoile/',
+        text: 'MPG_Spawner',
+        link: '/spawner/',
+        activeMatch: '/spawner/',
       },
       {
         text: 'Vue',
