@@ -5,7 +5,7 @@ aside: true
 # MPG_Spawner
 
 ::: info Discord
-Поддержка и обсуждение мода: https://discord.gg/zgNRg5n5UG
+[Поддержка и обсуждение мода](https://discord.com/channels/1198959737820168192/1209994533534826506)  
 :::
 
 ## Описание

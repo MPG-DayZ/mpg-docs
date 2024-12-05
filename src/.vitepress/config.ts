@@ -82,7 +82,12 @@ export default defineConfig({
         dateStyle: 'short',
         timeStyle: 'short'
       }
-    }
+    },
+    socialLinks: [
+      // https://simpleicons.org/
+      { icon: 'discord', link: 'https://discord.gg/zgNRg5n5UG'},
+      { icon: 'steam', link: 'https://steamcommunity.com/id/pafnuty10' },
+    ]
   },
   vite: {
     optimizeDeps: {
