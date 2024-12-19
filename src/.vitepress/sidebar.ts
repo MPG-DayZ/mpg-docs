@@ -15,4 +15,32 @@ export const sidebar = {
       ],
     },
   ],
+  '/boss-horde/': [
+    {
+      text: 'MPG_BossHorde',
+      items: [
+        { text: 'Информация', link: '/boss-horde/' },
+      ],
+    },
+    {
+      text: 'Настройка',
+      items: [
+        { text: 'Конфиг мода', link: '/boss-horde/mod-config' },
+      ],
+    },
+  ],
+  '/tdm-logs/': [
+    {
+      text: 'MPG_TDM_Logs',
+      items: [
+        { text: 'Информация', link: '/tdm-logs/' },
+      ],
+    },
+    {
+      text: 'Настройка',
+      items: [
+        { text: 'Конфиг мода', link: '/tdm-logs/mod-config' },
+      ],
+    },
+  ],
 };
