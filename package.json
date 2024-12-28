@@ -24,28 +24,28 @@
     "test:coverage": "exit 0"
   },
   "dependencies": {
-    "@shikijs/vitepress-twoslash": "^1.24.0",
+    "@shikijs/vitepress-twoslash": "^1.24.4",
     "@vitejs/plugin-vue": "^5.2.1",
-    "vite": "^6.0.2",
+    "vite": "^6.0.6",
     "vitepress": "^1.5.0",
     "vue": "^3.5.13"
   },
   "devDependencies": {
     "@eslint/compat": "^1.2.4",
-    "@eslint/js": "^9.16.0",
-    "@evilmartians/lefthook": "^1.8.5",
+    "@eslint/js": "^9.17.0",
+    "@evilmartians/lefthook": "^1.10.1",
     "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
-    "@stylistic/eslint-plugin": "^2.11.0",
-    "@types/node": "^22.10.1",
+    "@stylistic/eslint-plugin": "^2.12.1",
+    "@types/node": "^22.10.2",
     "@vue/compiler-sfc": "^3.5.13",
-    "eslint": "^9.16.0",
+    "eslint": "^9.17.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-vue": "^9.32.0",
-    "globals": "^15.13.0",
+    "globals": "^15.14.0",
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.9",
     "typescript": "^5.7.2",
-    "typescript-eslint": "^8.17.0"
+    "typescript-eslint": "^8.18.2"
   }
 }
