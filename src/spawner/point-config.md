@@ -485,7 +485,8 @@ ID точек не обязательно должны идти друг за д
 
 ## triggerEnterDelay
 
-`triggerEnterDelay` - Задержка в секундах между входом в триггер и спавном. Срабатывает только на первого, кто войдёт в триггер.  
+`triggerEnterDelay` - Задержка в секундах между входом в триггер и спавном. Срабатывает только на первого, кто войдёт в
+триггер.
 
 Пример: `"triggerEnterDelay": 10,`
 
@@ -497,6 +498,17 @@ ID точек не обязательно должны идти друг за д
 Для очистки триггера необходимо указать время задержки [triggerCleanupDelay](#triggercleanupdelay)
 
 Пример: `"triggerCleanupOnLeave": 1,`
+
+## triggerCleanupImmersive
+
+`triggerCleanupImmersive` - Включение иммерсивного удаления живых существ при включенном
+параметре [triggerCleanupOnLeave](#triggercleanuponleave)
+или [triggerCleanupOnLunchTime](#triggercleanuponlunchtime).
+
+Животное или зомби сначала будут "убиты", а через две секунды после этого труп исчезнет. Задержка в две секунды нужна
+для того, что бы корректно отработала анимация смерти.
+
+Пример: `"triggerCleanupImmersive": 1,`
 
 ## triggerCleanupOnLunchTime
 
