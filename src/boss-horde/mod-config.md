@@ -145,6 +145,19 @@ aside: true
 
 Пример: `"cleanSlavesOnFocusLoss": 0,`
 
+## killSlavesBeforeClean <Badge type="warning" text="1.1" title="Добавлено в версии 1.1" />
+
+`killSlavesBeforeClean` - При включении этого параметра и работающем
+параметре [cleanSlavesOnFocusLoss](#cleanslavesonfocusloss) и/или [cleanSlavesOnWin](#cleanslavesonwin) животные и зомби
+будут умирать и только потом удаляться.
+
+Задержка перед удалением будет увеличена на 2 секунды, что бы корректно
+отрабатывала анимация смерти.
+
+1 - включено, 0 - выключено.
+
+Пример: `"killSlavesBeforeClean": 1,`
+
 ## slaves
 
 `slaves` - Класснеймы подопечных

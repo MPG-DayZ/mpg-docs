@@ -499,7 +499,7 @@ ID точек не обязательно должны идти друг за д
 
 Пример: `"triggerCleanupOnLeave": 1,`
 
-## triggerCleanupImmersive
+## triggerCleanupImmersive <Badge type="warning" text="1.3" title="Добавлено в версии 1.3" />
 
 `triggerCleanupImmersive` - Включение иммерсивного удаления живых существ при включенном
 параметре [triggerCleanupOnLeave](#triggercleanuponleave)

@@ -2,7 +2,7 @@
 aside: true
 ---
 
-# MPG_BossHorde
+# MPG_BossHorde <Badge type="warning" text="1.1" title="Актуальная версия: 1.1" />
 
 ::: info Discord
 [Поддержка и обсуждение мода](https://discord.com/channels/1198959737820168192/1262523199481188422)  
