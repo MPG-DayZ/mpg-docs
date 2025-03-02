@@ -2,7 +2,7 @@
 aside: true
 ---
 
-# MPG_TDM_Logs
+# MPG_TDM_Logs <Badge type="warning" text="2.1" title="Актуальная версия: 2.1" />
 
 ::: info Discord
 [Поддержка и обсуждение мода](https://discord.com/channels/1198959737820168192/1249513754186612806)  
