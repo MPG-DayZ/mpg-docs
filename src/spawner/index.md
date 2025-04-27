@@ -2,7 +2,7 @@
 aside: true
 ---
 
-# MPG_Spawner <Badge type="warning" text="1.3" title="Актуальная версия: 1.3" />
+# MPG_Spawner <Badge type="warning" text="1.4" title="Актуальная версия: 1.4" />
 
 ::: info Discord
 [Поддержка и обсуждение мода](https://discord.com/channels/1198959737820168192/1209994533534826506)  

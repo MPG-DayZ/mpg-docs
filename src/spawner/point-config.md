@@ -490,15 +490,6 @@ ID точек не обязательно должны идти друг за д
 
 Пример: `"triggerEnterDelay": 10,`
 
-## triggerCleanupOnLeave
-
-`triggerCleanupOnLeave` - Удаление всей живности и лута, который были заспавнены, при покидании последним игроком зоны
-действия триггера.
-
-Для очистки триггера необходимо указать время задержки [triggerCleanupDelay](#triggercleanupdelay)
-
-Пример: `"triggerCleanupOnLeave": 1,`
-
 ## triggerCleanupImmersive <Badge type="warning" text="1.3" title="Добавлено в версии 1.3" />
 
 `triggerCleanupImmersive` - Включение иммерсивного удаления живых существ при включенном
@@ -509,6 +500,15 @@ ID точек не обязательно должны идти друг за д
 для того, что бы корректно отработала анимация смерти.
 
 Пример: `"triggerCleanupImmersive": 1,`
+
+## triggerCleanupOnLeave
+
+`triggerCleanupOnLeave` - Удаление всей живности и лута, который были заспавнены, при покидании последним игроком зоны
+действия триггера.
+
+Для очистки триггера необходимо указать время задержки [triggerCleanupDelay](#triggercleanupdelay)
+
+Пример: `"triggerCleanupOnLeave": 1,`
 
 ## triggerCleanupOnLunchTime
 
@@ -529,6 +529,27 @@ ID точек не обязательно должны идти друг за д
 или [triggerCleanupOnLunchTime](#triggercleanuponlunchtime).
 
 Пример: `"triggerCleanupDelay": 15,`
+
+## triggerInactiveResetDelay <Badge type="warning" text="1.4" title="Добавлено в версии 1.4" />
+
+`triggerInactiveResetDelay` - Задержка в секундах перед сбросом триггера при его неактивности.
+
+::: info Для чего этот параметр?
+
+- Этот параметр нужен для тех ситуаций, когда игрок случайно зацепил триггер и просто ушёл по своим делам.
+- Особенно полезно будет его включать в местах, где спавнится много животных или зомби.
+
+:::
+
+Установка этого параметра в значение больше нуля позволит сбросить триггер при условии, когда животные или зомби,
+которые заспавнились, не получили урон в течение времени, указанного в параметре.
+
+Триггер перейдёт в состояние, которое у него было в момент старта сервера, а все животные и зомби будут удалены.
+
+Задержка работает только тогда, когда включен параметр [triggerCleanupOnLeave](#triggercleanuponleave)
+или [triggerCleanupOnLunchTime](#triggercleanuponlunchtime).
+
+Пример: `"triggerInactiveResetDelay": 240,`
 
 ## triggerWorkingTime
 
@@ -696,6 +717,29 @@ ID точек не обязательно должны идти друг за д
   Тут будет работать только последний параметр т.к. количество неприменимо
   "AKM | 1 | -3 | -2 | -1"
 ],
+```
+
+## spawnQueueDelay <Badge type="warning" text="1.4" title="Добавлено в версии 1.4" />
+
+`spawnQueueDelay` - Задержка в **миллесекундах** для спавна каждого элемента из списка [spawnList](#spawnlist).
+
+Этот параметр нужен для более плавного спавна, особенно если в списке много элементов.
+
+Например, если должно заспавниться 10 медведей, и параметр установлен в значение 1000б будет спавниться по одному
+медведю раз в секунду до тех пор, пока не заспавнится 10 медведей.
+
+::: warning Важно
+
+Этот параметр не влияет на параметры [triggerFirstDelay](#triggerfirstdelay), [triggerCooldown](#triggercooldown)
+и [triggerEnterDelay](#triggerenterdelay)
+
+:::
+
+Пример:
+
+```
+// 1000 миллесекунд = 1 секунда
+"spawnQueueDelay": 1000,
 ```
 
 ## clearDeathAnimals
