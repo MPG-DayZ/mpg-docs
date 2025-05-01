@@ -52,6 +52,16 @@ aside: true
 
 Пример: `"masterAggressiveLevel": 3,`
 
+## masterNoDamageIfSlavesAlive <Badge type="warning" text="1.3" title="Добавлено в версии 1.3" />
+
+`masterNoDamageIfSlavesAlive` - Получение урона только тогда, когда у босса нет подопечных, например убиты или ещё не
+появились.
+
+- `0` - урон будет проходить.
+- `1` - Урон не будет проходить, пока у босса есть хотя бы один подопечный.
+
+Пример: `"masterNoDamageIfSlavesAlive": 1,`
+
 ## spawnIfMasterSilent
 
 `spawnIfMasterSilent` - Спавнить ли подопечных, если босс находится в спокойном состоянии (не агрится на игрока).

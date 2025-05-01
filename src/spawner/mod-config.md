@@ -39,7 +39,7 @@ aside: true
 ]
 ```
 
-## admins
+## admins <Badge type="warning" text="1.4" title="Добавлено в версии 1.4" />
 
 `admins` - Массив с админами.
 
