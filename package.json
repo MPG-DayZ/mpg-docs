@@ -13,40 +13,13 @@
     "work:debug": "DEBUG=true npm run build && npm run preview",
     "build": "vitepress build src",
     "preview": "vitepress preview src",
-    "lint:all": "npm run lint:md && npm run lint:scripts && npm run lint:types",
-    "fix:all": "npm run fix:md && npm run fix:scripts",
-    "lint:scripts": "eslint --config ./eslint.config.js --cache",
-    "fix:scripts": "npm run lint:scripts --fix",
-    "lint:md": "prettier {./src/**/*,README}.md --check",
-    "fix:md": "prettier {./src/**/*,README}.md --write --log-level warn",
-    "lint:types": "tsc -p ./tsconfig.json --noEmit",
-    "test": "exit 0",
-    "test:coverage": "exit 0"
-  },
-  "dependencies": {
-    "@shikijs/vitepress-twoslash": "^4.0.0",
-    "@vitejs/plugin-vue": "^6.0.4",
-    "vite": "^7.3.1",
-    "vitepress": "^1.6.4",
-    "vue": "^3.5.29"
+    "lint:all": "biome check",
+    "fix:all": "pnpm biome format --write"
   },
   "devDependencies": {
-    "@eslint/compat": "^2.0.2",
-    "@eslint/js": "^10.0.1",
+    "@biomejs/biome": "^2.4.4",
     "@evilmartians/lefthook": "^2.1.1",
-    "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
-    "@stylistic/eslint-plugin": "^5.9.0",
-    "@types/node": "^25.3.3",
-    "@vue/compiler-sfc": "^3.5.29",
-    "eslint": "^10.0.2",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.5",
-    "eslint-plugin-vue": "^10.8.0",
-    "globals": "^17.4.0",
-    "prettier": "^3.8.1",
-    "prettier-plugin-tailwindcss": "^0.7.2",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.56.1"
+    "vitepress": "2.0.0-alpha.16"
   },
   "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b",
   "pnpm": {

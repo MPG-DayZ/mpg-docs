@@ -1,4 +1,3 @@
-import { transformerTwoslash } from '@shikijs/vitepress-twoslash';
 import { defineConfig } from 'vitepress';
 
 import { nav } from './nav';
@@ -21,7 +20,6 @@ export default defineConfig({
       light: 'vitesse-light',
       dark: 'vitesse-dark',
     },
-    codeTransformers: [transformerTwoslash()],
   },
   head: [
     ['link', { rel: 'icon', type: 'image/png', size: '96x96', href: '/favicon-96x96.png' }],

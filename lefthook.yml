@@ -4,9 +4,5 @@
 pre-commit:
   parallel: true
   commands:
-    typecheck:
-      run: pnpm lint:types
     lint:
-      run: pnpm lint:scripts
-    markdown:
-      run: pnpm lint:md
+      run: pnpm lint:all
