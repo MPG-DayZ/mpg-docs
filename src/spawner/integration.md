@@ -5,7 +5,7 @@ aside: true
 # Интеграция с MPG_Spawner (для разработчиков)
 
 MPG_Spawner предоставляет публичный events-API и несколько геттеров для сторонних интеграций. Контракт описан в
-заголовке `MPG_Spawner/Scripts/4_World/MPG_SpawnerEvents.c`. Ниже — точки расширения, добавленные/используемые
+заголовке `MPG_Spawner/Scripts/4_World/MPG_SpawnerEvents.c`. Ниже - точки расширения, добавленные/используемые
 bridge-модом `MPG_Spawner_AIBandits`.
 
 ## Доступ к событиям
@@ -15,7 +15,7 @@ MPG_Spawner.GetInstance().GetEvents();
 ```
 
 Возвращает статический контейнер `MPG_SpawnerEvents`. Подписки **переживают перезагрузку конфига / реконструкцию
-синглтона** (контейнер — `static`), поэтому подписку достаточно сделать один раз за процесс.
+синглтона** (контейнер - `static`), поэтому подписку достаточно сделать один раз за процесс.
 
 ## События
 
@@ -55,15 +55,15 @@ ref MPG_Spawner_PointConfig cfg = MPG_Spawner.GetInstance().GetTrigger(pointId).
 MPG_Spawner.GetInstance().AddSpawnedInstance(pointId, entity.GetID(), entity, itemArr);
 MPG_Spawner.GetInstance().RemoveSpawnedCreature(pointId, entity.GetID(), killer, true, entity);
 
-// Уведомление об удалении — вызвать во всех путях удаления своей сущности ПЕРЕД ObjectDelete,
+// Уведомление об удалении - вызвать во всех путях удаления своей сущности ПЕРЕД ObjectDelete,
 // чтобы подписчики OnDespawn успели почистить параллельные структуры.
 MPG_Spawner.GetInstance().NotifyDespawn(pointId, entity);
 ```
 
 ## `NotifyDespawn` и контракт `OnDespawn`
 
-`OnDespawn` ранее инвокалось только под `#ifdef MPG_SPWNR_DEBUG` (контрактная ловушка — в релизе событие не вызывалось).
-Теперь `NotifyDespawn(pointId, entity)` — публичный метод, и MPG_Spawner вызывает его **во всех путях удаления**
+`OnDespawn` ранее инвокалось только под `#ifdef MPG_SPWNR_DEBUG` (контрактная ловушка - в релизе событие не вызывалось).
+Теперь `NotifyDespawn(pointId, entity)` - публичный метод, и MPG_Spawner вызывает его **во всех путях удаления**
 существа:
 
 - смерть (`RemoveSpawnedCreature`),
@@ -71,9 +71,9 @@ MPG_Spawner.GetInstance().NotifyDespawn(pointId, entity);
 - удаление при перезагрузке конфига / `DeleteTrigger(hard)`.
 
 Интеграция, которая ведёт параллельные структуры (например, группы AI_Bandits), может надёжно подписаться на
-`OnDespawn` — колбэк сработает при любом способе удаления существа.
+`OnDespawn` - колбэк сработает при любом способе удаления существа.
 
 ## См. также
 
-- [Конфиг точки](./point-config.md) — все поля `MPG_Spawner_PointConfig`.
-- [AI_Bandits интеграция](./ai-bandits.md) — пример bridge-мода на базе этого контракта.
+- [Конфиг точки](./point-config.md) - все поля `MPG_Spawner_PointConfig`.
+- [AI_Bandits интеграция](./ai-bandits.md) - пример bridge-мода на базе этого контракта.

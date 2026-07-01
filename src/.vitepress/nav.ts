@@ -42,6 +42,11 @@ export const nav = [
         link: '/bears-pack/',
         activeMatch: '/bears-pack/',
       },
+      {
+        text: 'MPG_ModsLogger',
+        link: '/mods-logger/',
+        activeMatch: '/mods-logger/',
+      },
     ],
   },
 ];

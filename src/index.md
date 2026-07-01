@@ -39,4 +39,8 @@ features:
     link: /bears-pack/
     # details: client-side
     linkText: Пак медведей разного размера, цветов и характеристик
+  - title: MPG_ModsLogger
+    link: /mods-logger/
+    # details: client-side
+    linkText: Серверной мод логирования для DayZ-модов
 ---

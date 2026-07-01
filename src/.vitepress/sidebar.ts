@@ -59,4 +59,17 @@ export const sidebar = {
       items: [{ text: 'Конфиг мода', link: '/magnet-armband/mod-config' }],
     },
   ],
+  '/mods-logger/': [
+    {
+      text: 'MPG_ModsLogger',
+      items: [{ text: 'Информация', link: '/mods-logger/' }],
+    },
+    {
+      text: 'Детальное описание',
+      items: [
+        { text: 'Описание и API', link: '/mods-logger/overview' },
+        { text: 'Интеграция мода', link: '/mods-logger/integration' },
+      ],
+    },
+  ],
 };
