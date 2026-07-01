@@ -4,7 +4,10 @@ export const sidebar = {
       text: 'MPG_Spawner',
       items: [
         { text: 'Информация', link: '/spawner/' },
+        { text: 'Быстрый старт', link: '/spawner/quickstart' },
         { text: 'Сравнение с другими спавнерами', link: '/spawner/compare' },
+        { text: 'API Спавнера', link: '/spawner/integration' },
+        { text: 'AI_Bandits', link: '/spawner/ai-bandits' },
       ],
     },
     {
@@ -12,6 +15,7 @@ export const sidebar = {
       items: [
         { text: 'Конфиг мода', link: '/spawner/mod-config' },
         { text: 'Конфиг точки', link: '/spawner/point-config' },
+        { text: 'Конфиг группы', link: '/spawner/groups' },
       ],
     },
   ],
