@@ -37,7 +37,7 @@ aside: true
 
 Установить мод можно любым, привычным для вас способом, скачав его со Steam.
 
-`@MPG_ModsLogger` должен идти **до** модов-потребителей в списке модов:
+https://steamcommunity.com/sharedfiles/filedetails/?id=3755713051
 
 ```
 -serverMod=@MPG_ModsLogger;@YourMod

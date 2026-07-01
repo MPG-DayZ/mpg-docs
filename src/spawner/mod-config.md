@@ -40,8 +40,8 @@ aside: true
 Заменяет удалённый параметр `isDebugEnabled` - теперь детализацией логов управляет одно число, а не флаг "всё или
 ничего".
 
-::: warning Внимание
-Для корректной работы логирования нужен мод [MPG_ModsLogger](https://steamcommunity.com/sharedfiles/filedetails/?id=3755713051)
+::: danger Внимание!
+### Для корректной работы логирования нужен дополнительный серверный мод [MPG_ModsLogger](https://steamcommunity.com/sharedfiles/filedetails/?id=3755713051)
 
 Без этого мода логи будут писаться просто в сриптлоги сервера, а не в отдельный файл.
 :::
