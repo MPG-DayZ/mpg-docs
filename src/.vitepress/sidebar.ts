@@ -72,4 +72,21 @@ export const sidebar = {
       ],
     },
   ],
+  '/car-felling-trees-2/': [
+    {
+      text: 'MPG_CarFellingTrees2',
+      items: [{ text: 'Информация', link: '/car-felling-trees-2/' }],
+    },
+    {
+      text: 'Детальное описание',
+      items: [
+        { text: 'Как это работает', link: '/car-felling-trees-2/how-it-works' },
+        { text: 'Быстрый старт', link: '/car-felling-trees-2/quickstart' },
+      ],
+    },
+    {
+      text: 'Настройка',
+      items: [{ text: 'Конфиг мода', link: '/car-felling-trees-2/config' }],
+    },
+  ],
 };

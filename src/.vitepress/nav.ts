@@ -47,6 +47,11 @@ export const nav = [
         link: '/mods-logger/',
         activeMatch: '/mods-logger/',
       },
+      {
+        text: 'MPG_CarFellingTrees2',
+        link: '/car-felling-trees-2/',
+        activeMatch: '/car-felling-trees-2/',
+      },
     ],
   },
 ];

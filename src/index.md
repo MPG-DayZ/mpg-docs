@@ -43,4 +43,8 @@ features:
     link: /mods-logger/
     # details: client-side
     linkText: Серверной мод логирования для DayZ-модов
+  - title: MPG_CarFellingTrees2
+    link: /car-felling-trees-2/
+    # details: client-side
+    linkText: Серверной мод для валки деревьев любой машиной с настройкой через json
 ---
