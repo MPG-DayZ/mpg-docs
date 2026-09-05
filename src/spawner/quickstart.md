@@ -96,7 +96,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3120779051
 ```
 
 - `showVisualisation` рисует полупрозрачную фигуру зоны - нужен мод
-  [@MPG_Spawner_Debug](https://steamcommunity.com/sharedfiles/filedetails/?edit=true&id=3755477157)).
+  [@MPG_Spawner_Debug](https://steamcommunity.com/sharedfiles/filedetails/?edit=true&id=3755477157).
 - `showEntityLabels` рисует над каждой заспавненной живностью подпись вида `1 · #3` (видят только админы).
 
 Так вы сразу увидите, правильно ли стоит зона и где появляется живность.

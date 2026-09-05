@@ -16,6 +16,7 @@ export const sidebar = {
         { text: 'Конфиг мода', link: '/spawner/mod-config' },
         { text: 'Конфиг точки', link: '/spawner/point-config' },
         { text: 'Конфиг группы', link: '/spawner/groups' },
+        { text: 'Конфиг волн', link: '/spawner/waves' },
       ],
     },
   ],

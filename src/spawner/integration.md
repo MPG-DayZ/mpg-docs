@@ -45,6 +45,71 @@ void Init() {
 }
 ```
 
+## Гейты (вето на срабатывание)
+
+Гейты - обратная сторона событий: bridge-мод может **запретить** срабатывание триггера.
+
+- `MPG_Spawner.GetGates().Register(new MyGate())` - регистрация один раз за процесс
+  (переживает config-reload), например в `modded class MissionServer.OnInit`.
+- Чекпойнты: `CanSpawn` (перед спавн-циклом), `CanFirstSpawn` (перед FIRST_SPAWN-эффектами),
+  `CanWin` (перед WIN-цепочкой, в обоих путях), `CanLeave` (перед leave-реакциями),
+  `CanGroupSpawn` (перед разворотом `@group` в пул).
+- Контракт: вернуть `false` = заблокировать (заполнить `ctx.blockReason` - попадёт в DEBUG-лог).
+  Возвращают `true` по умолчанию - переопределяйте только нужное.
+- `ctx.player` может быть `null` в `CanWin`/`CanGroupSpawn`, `ctx.killer` заполнен только в
+  `CanWin` - проверяйте перед использованием (игрок гарантированно не `null` только в `CanSpawn`).
+- Опционально: точка/группа перечисляет имена гейтов в поле `triggerGates` (AND-семантика);
+  имена регистрозависимы. Незарегистрированный гейт - fail-open + WARN (once).
+- Кулдаун при блокировке SPAWN не расходуется, `isEntered` не выставляется. Retry: пока гейт
+  блокирует и игрок остаётся в зоне, попытка повторяется на каждом stay-тике - у любых точек
+  с `triggerGates` (волновые и обычные); `triggerEnterDelay` уважается.
+- Свои поля конфига добавляйте через `modded class MPG_Spawner_PointConfig` / `_GroupConfig` -
+  JsonFileLoader подхватит их. Примечание: при автопересохранении конфига
+  (`ValidateConfig`) ваши поля попадут в JSON точек - это нормально.
+- Не гейтятся никогда: вход/выход игрока, события `OnTriggerEntered`/`OnTriggerLeft`,
+  входная/выходная нотификации, отмена волн при выходе.
+
+Пример bridge-мода "ранги":
+
+```c
+modded class MPG_Spawner_PointConfig {
+  string requiredRank = "";  // пусто = гейт не активен на точке
+}
+
+class MPG_RanksGate extends MPG_Spawner_TriggerGate {
+  override string GetName() { return "mpg_ranks"; }
+
+  override bool CanSpawn(MPG_Spawner_GateContext ctx) {
+    MPG_Spawner_PointConfig cfg = MPG_Spawner_PointConfig.Cast(ctx.config);
+
+    if (!cfg || cfg.requiredRank == "") {
+      return true;
+    }
+
+    PlayerBase player = PlayerBase.Cast(ctx.player);
+
+    // ЗДЕСЬ вызов API вашего мода рангов: по PlainId получить ранг и сравнить.
+    string rank = MyRanksApi.GetRank(player.GetIdentity().GetPlainId());
+
+    if (rank != cfg.requiredRank) {
+      ctx.blockReason = "rank '" + rank + "' != required '" + cfg.requiredRank + "'";
+      NotificationSystem.SendNotificationToPlayerExtended(player, 5,
+          cfg.notificationTitle, "Ранг не позволяет: нужно '" + cfg.requiredRank + "'");
+      return false;
+    }
+
+    return true;
+  }
+}
+
+modded class MissionServer {
+  override void OnInit() {
+    super.OnInit();
+    MPG_Spawner.GetGates().Register(new MPG_RanksGate());
+  }
+}
+```
+
 ## Геттеры
 
 ```c
