@@ -79,3 +79,5 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3120779051
 - [Волны спавна](waves.md) - последовательность волн с условиями завершения, переиспользуемые между триггерами
 - [AI_Bandits интеграция](ai-bandits.md) - спавн ботов AI_Bandits через триггеры (bridge-мод `MPG_Spawner_AIBandits`)
 - [Интеграция с MPG_Spawner](integration.md) - events-API и геттеры для сторонних модов
+- [MPG_Spawner_VPP](vpp.md) - Интеграция в админку VPP
+
