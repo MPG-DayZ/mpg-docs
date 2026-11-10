@@ -13,6 +13,7 @@
     "work:debug": "DEBUG=true npm run build && npm run preview",
     "build": "vitepress build src",
     "preview": "vitepress preview src",
+    "gen:llms": "node scripts/generate-llms.mjs",
     "lint:all": "biome check",
     "fix:all": "pnpm biome format --write"
   },

@@ -1,0 +1,85 @@
+# MPG Mods
+
+> Документация по серверным и клиентским модам MPG для игры DayZ; все моды настраиваются через JSON-конфиги. Сайт: https://docs.mpg-dayz.ru · Репозиторий: https://github.com/MPG-DayZ/mpg-docs
+
+## Обзор
+
+- [Список всех модов](src/index.md): главная страница документации
+
+## MPG_Spawner
+
+Гибко настраиваемый спавнер для живности, лута и маппинга по триггерам
+
+- [Информация](src/spawner/index.md)
+- [Быстрый старт](src/spawner/quickstart.md)
+- [Сравнение с другими спавнерами](src/spawner/compare.md)
+- [API Спавнера](src/spawner/integration.md)
+- [AI_Bandits](src/spawner/ai-bandits.md)
+- [Конфиг мода](src/spawner/mod-config.md)
+- [Конфиг точки](src/spawner/point-config.md)
+- [Конфиг группы](src/spawner/groups.md)
+- [Конфиг волн](src/spawner/waves.md)
+- [MPG_Spawner_VPP](src/spawner/vpp.md)
+
+## MPG_BossHorde
+
+Делаем любого зомби или животного боссом со своими подопечными
+
+- [Информация](src/boss-horde/index.md)
+- [Конфиг мода](src/boss-horde/mod-config.md)
+
+## MPG_TDM_Logs
+
+Логи для действий игроков с предметами (взятие, сброс, перемещение)
+
+- [Информация](src/tdm-logs/index.md)
+- [Конфиг мода](src/tdm-logs/mod-config.md)
+
+## MPG_DamageRadius
+
+Дополнительный урон по персонажу, если он близко к животному или зомби
+
+- [Информация](src/damage-radius/index.md)
+- [Конфиг мода](src/damage-radius/mod-config.md)
+
+## MPG_CheckLifeTime
+
+Мод с админской книжкой для удобной проверки лайвтайма предметов
+
+- [MPG_CheckLifeTime](src/check-lifetime/index.md)
+
+## MPG_AntiDropArmband
+
+Повязка, которая не даёт предмету выпасть из рук при потере сознания
+
+- [MPG_AntiDropArmband](src/anti-drop-armband/index.md)
+
+## MPG_MagnetArmband
+
+Повязка, которая помогает быстро собрать лут в определённо радиусе
+
+- [Информация](src/magnet-armband/index.md)
+- [Конфиг мода](src/magnet-armband/mod-config.md)
+
+## MPG_BearsPack
+
+Пак медведей разного размера, цветов и характеристик
+
+- [MPG_BearsPack](src/bears-pack/index.md)
+
+## MPG_ModsLogger
+
+Серверной мод логирования для DayZ-модов
+
+- [Информация](src/mods-logger/index.md)
+- [Описание и API](src/mods-logger/overview.md)
+- [Интеграция мода](src/mods-logger/integration.md)
+
+## MPG_CarFellingTrees2
+
+Серверной мод для валки деревьев любой машиной с настройкой через json
+
+- [Информация](src/car-felling-trees-2/index.md)
+- [Как это работает](src/car-felling-trees-2/how-it-works.md)
+- [Быстрый старт](src/car-felling-trees-2/quickstart.md)
+- [Конфиг мода](src/car-felling-trees-2/config.md)
