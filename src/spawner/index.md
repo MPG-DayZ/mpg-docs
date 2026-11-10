@@ -2,7 +2,7 @@
 aside: true
 ---
 
-# MPG_Spawner <Badge type="warning" text="2.3" title="Актуальная версия: 2.3" />
+# MPG_Spawner <Badge type="warning" text="2.4" title="Актуальная версия: 2.4" />
 
 ::: info Discord
 [Поддержка и обсуждение мода](https://discord.com/channels/1198959737820168192/1209994533534826506)  
@@ -80,4 +80,3 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=3120779051
 - [AI_Bandits интеграция](ai-bandits.md) - спавн ботов AI_Bandits через триггеры (bridge-мод `MPG_Spawner_AIBandits`)
 - [Интеграция с MPG_Spawner](integration.md) - events-API и геттеры для сторонних модов
 - [MPG_Spawner_VPP](vpp.md) - Интеграция в админку VPP
-

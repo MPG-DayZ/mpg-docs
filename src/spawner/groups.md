@@ -285,11 +285,11 @@ $profile:MPG_Spawner/
 }
 ```
 
-### notificationTextSpawn
+### notificationTextSpawn <Badge type="warning" text="2.4" title="Значение off добавлено в версии 2.4" />
 
 `notificationTextSpawn` - **собственная нотификация группы** при реальном спавне её контента. Формат идентичен
 [notifications.textSpawn](point-config.md#notifications-textspawn) точки: `%1` = количество, `%2..%5` = склонения через
-`;` (см. [GetDeclensionText](point-config.md#notifications-textspawn)).
+`;` (см. [GetDeclensionText](point-config.md#notifications-textspawn)). Пусто или `"off"` - нотификации нет.
 
 Значение по умолчанию: `""` (групповой нотификации нет).
 

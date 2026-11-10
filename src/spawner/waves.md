@@ -235,10 +235,12 @@ $profile:MPG_Spawner/
 
 Пример: `"cleanBefore": true,`
 
-### notificationText
+### notificationText <Badge type="warning" text="2.4" title="Значение off добавлено в версии 2.4" />
 
 `notificationText` - текст нотификации при старте волны. Плейсхолдеры: `{current}` - номер текущей волны, `{total}` -
-всего волн. Пусто - дефолтный текст из кода: "Волна {current} из {total}".
+всего волн. Пусто - дефолтный текст из кода: "Волна {current} из {total}". `"off"` - нотификацию старта волны не
+отправлять (сам спавн и отсчёт паузы работают как обычно; отсчёт отключается отдельно - см.
+[waveCountdownInterval](#wavecountdowninterval) ниже).
 
 Нотификации получают игроки **внутри зоны**. Заголовок, иконка и время берутся из настроек точки
 ([notificationTitle](point-config.md#notificationtitle), [notificationIcon](point-config.md#notificationicon),
@@ -324,10 +326,14 @@ $profile:MPG_Spawner/
 
 Пример: `"waveContinueOnLeave": true,`
 
-### waveCountdownInterval
+### waveCountdownInterval <Badge type="warning" text="2.4" title="Значение -1 добавлено в версии 2.4" />
 
 `waveCountdownInterval` - повтор отсчёта в паузе между волнами: уведомление "Волна {current} из {total} через
-{seconds} сек." приходит каждые `N` секунд. `0` - выключено (одно уведомление при старте паузы).
+{seconds} сек." приходит каждые `N` секунд. `0` - повторы выключены (одно уведомление при старте паузы).
+
+`-1` в любом из полей отсчёта (`waveCountdownInterval` или `waveCountdownFinalSeconds`) - отсчёт полностью выключен:
+сообщений о паузе не будет вообще. Чтобы заодно убрать и сообщение старта волны, задайте волне
+[notificationText](#notificationtext): `"off"`.
 
 Значение по умолчанию: `0`.
 
@@ -336,7 +342,8 @@ $profile:MPG_Spawner/
 ### waveCountdownFinalSeconds
 
 `waveCountdownFinalSeconds` - отсчёт на финальных секундах паузы: когда до старта следующей волны осталось `N` секунд
-или меньше, уведомление приходит каждую секунду. `0` - выключено.
+или меньше, уведомление приходит каждую секунду. `0` - выключено. `-1` в любом из полей отсчёта - отсчёт целиком
+выключен (см. [waveCountdownInterval](#wavecountdowninterval)).
 
 Значение по умолчанию: `0`.
 
@@ -350,7 +357,7 @@ $profile:MPG_Spawner/
 | `spawnPositions`/`spawnRadius`       | Как обычно - позиции и разброс спавна всех волн; волна может переопределить своими `spawnPositions`/`spawnRadius`. Визуализация дебаг-мода показывает точечные `spawnPositions`, override волн не рисуется                |
 | `spawnCountLimit`                    | Действует (клэмп одновременного количества). Для волн рекомендуется `0`                                                                                                                                                 |
 | `spawnLoopInside`, `triggerCooldown` | Игнорируются (WARN при валидации)                                                                                                                                                                                       |
-| `notificationTextSpawn`              | Работает как обычно - на каждый цикл спавна (в т.ч. волновой)                                                                                                                                                           |
+| `notificationTextSpawn`              | Работает как обычно - на каждый цикл спавна (в т.ч. волновой); `"off"` - выключено                                                                                                                                      |
 | `triggerCleanupOnLeave`/`Immersive`  | Работают как обычно; при дефолтной отмене волн конфликта нет                                                                                                                                                            |
 | `triggerInactiveResetDelay`          | Работает: сброс триггера возвращает волны к волне 1                                                                                                                                                                     |
 | `enableEquipCE`, `clearDeath*`       | Работают как обычно                                                                                                                                                                                                     |
